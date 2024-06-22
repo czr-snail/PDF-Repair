@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.App.light {
+  background-color: #f0f0f0;
+}
+
+.App.dark {
+  background-color: #121212;
+}
+
+.container {
+  text-align: center;
+  transition: all 0.3s ease;
+  padding: 40px !important;
+  border-radius: 20px !important;
+  background: linear-gradient(145deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2) !important;
+}
+
+.title {
+  margin-bottom: 1rem !important;
+  font-weight: 700 !important;
+  background: linear-gradient(45deg, #6200EA, #00C853);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  margin-bottom: 2rem !important;
+  opacity: 0.8;
+}
+
+.message {
+  margin-top: 1rem;
+  font-style: italic;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.info-icon {
+  margin-left: 8px;
+  cursor: help;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.info-icon:hover {
+  opacity: 1;
+}
+
+.hover-button {
+  margin: 10px !important;
+  transition: all 0.3s ease !important;
+}
+
+.hover-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2) !important;
+}
+
+.hover-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
+.upload-button {
+  background: linear-gradient(45deg, #6200EA, #B388FF) !important;
+}
+
+.repair-button {
+  background: linear-gradient(45deg, #00C853, #69F0AE) !important;
+}
+
+.download-button {
+  border: 2px solid #6200EA !important;
+  color: #6200EA !important;
+}
+
+.download-button:hover {
+  background-color: rgba(98, 0, 234, 0.1) !important;
+}
+
+.file-name {
+  margin-top: 0.5rem !important;
+  font-style: italic;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Add some responsive styles */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px !important;
+  }
+
+  .title {
+    font-size: 2rem !important;
+  }
+
+  .subtitle {
+    font-size: 0.9rem !important;
+  }
+
+  .hover-button {
+    font-size: 0.9rem !important;
+    padding: 8px 16px !important;
+  }
+}
